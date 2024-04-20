@@ -1,0 +1,678 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Photo - Graphy</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    
+    <style>
+      
+
+.slide__text-desc {
+  font-family: 'Roboto', sans-serif;
+}
+
+
+
+html , body{
+  height: 100%;
+  background-color:rgba(224, 187, 64, 0.171); 
+}
+
+
+*, *:before, *:after {
+    margin: 0;
+  padding: 0;
+}
+.btn-outline-warning{
+        margin-left: 2px;
+        width: 150px;
+        padding-top: 8px;
+        height: 45px;
+        border-radius: 30px;
+        margin-bottom: 5px;
+        font-size: 16px;
+        border: 2px solid  rgb(180, 142, 18);
+        color: rgb(236, 187, 24);
+    }
+    .btn-outline-red{
+      margin-top: 20px;
+    }
+
+
+    </style>
+  </head>
+  <body>
+   
+
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        transition: all 0.3s ease-in;
+      }
+      .front{
+      /* display: flex; */
+      width: 100%;
+      min-height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.708)),url(/static/images/slider-img.jpg);
+      background-size: cover;
+      }
+      .front_1{
+        width: 100%;
+        height: 80px;
+        display: flex;
+      }
+      .front2{
+        width: 30%;
+        height: 100%;
+        
+      }
+      .front3{
+        width: 70%;
+        height: 100%;
+      }
+      .lab{
+        display: flex;
+        text-align: center;
+      }
+      .front_know{
+        list-style: none;
+        margin-left: 30px;
+        margin-top: 35px;
+        color: white;
+        position: relative;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      .front_know::before{
+        position: absolute;
+        content: '';
+        background-color: white;
+        width: 0%;
+        color: white;
+        cursor: pointer;
+        height: 2px;
+        margin-top: 30px;
+        transition: all 0.3s ease-in;
+      }
+      .front_know:hover::before {
+        width: 100%;
+      }
+      .front_button{
+        margin-left: 2px;
+          width: 150px;
+          height: 45px;
+          margin-top: 25px;
+          margin-left: 50px;
+          background-color: rgb(238, 187, 18);
+          font-size: 16px;
+          border: 2px solid  rgb(238, 187, 18);
+          color: white;
+          transition: all 0.5s ease-in;
+      }
+      .front_button:hover{
+        background-color: transparent;
+      }
+  
+    </style>
+    <div id="ali_hassan"  class="alert  alert-dismissible fade show" role="alert" style="display: none; background-color: rgb(94, 3, 3); border: 2px solid red; color: white; top: 0; position: fixed; width: 100%; ">
+      <strong>Welcome to the Photography!</strong> Please Login Now 
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+
+    <div class=" front">
+        <div class="front_1">
+        <div class="front2">
+          <h5  data-aos="fade-left" style="margin-top: 30px; text-align: center; color: rgb(238, 187, 18); font-size: 25px;">
+            𝗣𝗵𝗼𝘁𝗼𝗴𝗿𝗮𝗽𝗵𝘆
+            </h5>
+        </div>
+        <div class="front3">
+          <ul class="lab">
+            <a href="{% url 'login' %}" class="front_know" style="margin-left: 400px;">Home</a>
+            <a href="{% url 'login' %}" class="front_know">About</a>
+            <a href="{% url 'login' %}" class="front_know">Galery</a>
+            <a href="{% url 'login' %}" class="front_know">Contact</a>
+  
+            <button class="front_button">Try it Free</button>
+          </ul>
+        </div>
+      </div>
+        <!-- --------2 -->
+      <style>
+        .front_bo1{
+          width: 100%;
+          height: 400px;
+          display: inline-flex;
+        }
+        .front_bo_text{
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          font-weight: bold;
+          letter-spacing: 0px;
+        color:white;
+          font-size: 25px;
+          /* color: white; */
+          margin-top: 100px;
+          margin-left: 150px;
+        }
+        .front_bo_text1{
+          letter-spacing: 0px;
+          font-size: 35px;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: rgb(238, 187, 18);
+         
+          margin-left: 150px;
+        }
+        .front_bo_text2{
+          width: 400px;
+          margin-top: 15px;
+          margin-left: 160px;
+        color: white;
+          
+          font-size: 15px;
+  
+        }
+        .front_button1{
+          width: 150px;
+          height: 50px;
+          margin-left: 5px;
+          text-decoration: none;
+          text-align: center;
+          padding-top: 10px;
+          background-color: rgb(238, 187, 18);
+          color: white;
+          margin-top: 10px;
+          transition: all 0.3s ease-in;
+          margin-left: 124px;
+
+        }
+        .front_button2 {
+          background-color: transparent;
+          border: 2px solid  rgb(238, 187, 18);
+           color:  rgb(238, 187, 18);
+          transition: all 0.3s ease-in;
+          margin-left: 5px;
+        }
+        .front_button1:hover{
+            background-color: transparent;
+          border: 2px solid  rgb(238, 187, 18);
+            color: white;
+        }
+        
+  
+        .front_button2:hover{
+          background-color:  rgb(238, 187, 18);
+          color: white;
+        }
+      </style>
+      
+      <div class="front_bo1 overflow-x-hidden" style="overflow-x: hidden;" >
+        <ul>
+        <h3 class="front_bo_text" data-aos="fade-up">Welcome To The Website </h3>
+        <h1 class="front_bo_text1"  data-aos="fade-right">What is photography<span style="font-size: 15px;" >________</span> </h1>
+        <p  data-aos="fade-left" class="front_bo_text2">Photography is the art, application, and practice of creating images by recording light, either electronically by means of an image sensor, or chemically by means of a light-sensitive material such as photographic film.</p>
+        <ul style="display: flex;">
+          <a  data-aos="fade-right" href="{% url 'signup' %}" class="front_button1 ">Sign UP</a>
+          <a  data-aos="fade-left" href="{% url 'login' %}" class="front_button1 front_button2">Login</a>
+        </ul>
+      </ul>
+      </div>
+    </div>
+
+
+  <!-- about -->
+
+  <style>
+    .a_1{
+      min-height: 115vh;
+      
+    }
+    .x_1{
+      width: 300px;
+      height: 300px;
+      border: 1px solid rgb(3, 3, 39);
+      margin: auto;
+      box-shadow: 0 0 10px  rgba(202, 174, 83, 0.308);
+      position: relative;
+      background-color: rgb(3, 3, 39);
+
+    }
+    .x_1:hover{
+     transform: skewX(25deg);
+
+    }
+    .x_2{
+      margin-top: 60px;
+    }
+    .a_2{
+      margin-top: 140px;
+      font-size: 45px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      /* color: rgb(180, 142, 18); */
+    }
+  </style>
+
+  
+
+  <div class="container-fluid a_1" style="overflow-x: hidden;" >
+    <div class="row">
+      <center><h1 class="a_2" data-aos="zoom-out-up" >Welcome to our<span style="color: rgb(180, 142, 18); font-size: 45px;"> Photography website</span></h1></center>
+      <center><p data-aos="fade-down" style="margin-left:70px; margin-right: 70px; font-size: 16px; margin-top: 20px; color:rgb(85, 74, 43) ;">A simple definition of photography is that it is the process of capturing light with a device known as a camera and creating an image. That camera could come in various forms by a modern interpretation, including cell phone cameras, digital cameras, and traditional analog cameras.Photography's major purposes are communication and the recording of ephemeral moments in time. humans have had the ability to create works of art using light. <b style="font-size: 15px;">Types Of Photo Graphy</b>  </p></center>
+      <div class="col-4 x_1 x_2" data-aos="zoom-in-right">
+        <center><h1 style="font-size: 25px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top:35px; color:rgb(223, 173, 11); ">Wedding ______</h1></center>
+        <center><p style=" color: rgb(199, 178, 102); font-size: 15px; margin-left: 5px; margin-right: 5px; margin-top: 25px;">Wedding photography is a specialty in photography that is primarily focused on the photography of events and activities relating to weddings.</p></center>
+
+      </div>
+      <div class="col-4 x_1 x_2" data-aos="zoom-in-down">
+        <center><h1 style="font-size: 25px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top:35px; color:rgb(223, 173, 11);  ">Nature______</h1></center>
+        <center><p style=" color: rgb(199, 178, 102); font-size: 15px; margin-left: 5px; margin-right: 5px; margin-top: 25px;">Nature photography is a wide range of photography taken outdoors and devoted to displaying natural elements such as landscapes, wildlife, plants, and close-ups of natural scenes and textures.
+        </p></center>
+
+      </div>
+      <div class="col-4 x_1 x_2" data-aos="zoom-in-left" >
+        <center><h1 style="font-size: 25px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; margin-top:35px; color:rgb(223, 173, 11);  ">Fine-art  ______</h1></center>
+        <center><p style=" color: rgb(199, 178, 102); font-size: 15px; margin-left: 5px; margin-right: 5px; margin-top: 25px;">Fine art photography, also known as “photography art,” or “artistic photography” is photographic artwork created in line with the artist's vision. Fine artists use photography as their chosen medium for creative expression.</p></center>
+       </div>
+    </div>
+  </div>
+
+
+
+  <!-- about end  -->
+
+
+
+  <style>
+
+    .a_3{
+      min-height: 100vh;
+      display: flex;
+      width: 100%;
+    }
+    .a_4{
+      width: 480px;
+      height: 400px;
+      margin-top: 200px;
+      transition: all 0.3s;
+      margin-left: 240px;
+      background-image: url(https://media.npr.org/assets/img/2012/02/02/mona-lisa-copy_custom-cf935c261c640b9ff7e214059a0328c880c22f50-s1100-c50.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .a_5{
+      width: 450px;
+      height: 500px;
+      margin-top: 100px;
+      margin-left: 20px;
+      background-image: url(https://media.weddingz.in/images/ffcdc7c84def0fd8611d4c24b8463306/Christain-wedding.jpg);
+      background-position: center;
+      background-size:cover ;
+      transition: all 0.3s;
+      background-size: cover;
+    }
+    .a_6{
+      width: 400px;
+      height: 400px;
+      transition: all 0.3s;
+      margin-left: 320px;
+      background-image: url(https://media.istockphoto.com/id/157375891/photo/scarlet-macaws.jpg?s=612x612&w=0&k=20&c=rrvMxRyLm77jcnmnrGtdOpw0PTxo8mkNOUA_hO3RO1g=);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .a_7{
+      width: 450px;
+      height: 400px;
+      margin-left: 20px;
+      background-image: url(https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832_640.jpg );
+      background-position: center;
+        transition: all 0.3s;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    .a_4:hover , .a_5:hover , .a_6:hover , .a_7:hover{
+        transform: scale(1.1);
+      }
+  </style>
+
+
+
+
+  <!-- photo graphy image  -->
+
+
+  <<div class="container-fluid a_3 overflow-x-hidden" >
+    <div class="a_4"  data-aos="zoom-out-down"> <img src="" alt="" > 
+      <!-- <img src="static/images/wedding.jpeg"> -->
+    </div>
+    <div class="a_5" data-aos="zoom-out-down"> <img src="" alt=""> 
+    <!-- <img src="/static/images/bird.jpeg" alt=""> -->
+    </div>
+  </div>
+  <div class="container-fluid a_3" style="min-height: 70vh;">
+    <div class="a_6" data-aos="zoom-out-right"><img src="" alt=""> 
+      <!-- <img src="/static/images/bird.jpeg" alt=""> -->
+    </div>
+    <div class="a_7" data-aos="zoom-out-left"><img src="" alt=""> 
+      <!-- <img src="/static/images/bird.jpeg" alt=""> -->
+    </div>
+  </div>
+
+  <!-- photo graphy image end  -->
+
+
+  <style>
+    .a_10{
+      min-height: 60vh;
+      margin-top: 200px;
+      display: flex;
+    }
+    .a_8{
+      background-color: rgb(3, 3, 39);
+      min-height: 60vh;
+    }
+    .a_9{
+      height: 60vh;
+      margin: auto;
+      background-image: url(https://as2.ftcdn.net/v2/jpg/06/16/47/51/1000_F_616475105_iFZBpCoALiHmRiKMSjHpzyWOmLWA2kdz.jpg);
+      background-size: cover;
+      background-position: center;
+      margin-left: 5px;
+    }
+  </style>
+
+
+    <!-- about  -->
+
+
+
+<div class="container-fluid a_10" >
+  <div class="row">
+    <div class="col a_8" data-aos="zoom-in-right">
+      <h5 style="color: rgb(223, 173, 11); margin-top: 40px; font-size: 18px; margin-left: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nature Photo Graphy____________  </h5>
+      <h1 style=" color: rgb(223, 173, 11); margin-top: 10px; font-size: 35px; margin-left: 20px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Nature Photo</h1>
+      <p style="font-size: 16px; color: white ; margin-left: 20px; margin-top: 30px;">Nature photography is a genre of photography that unlocks the beauty of natural elements in their natural habitat within a frame. It is an umbrella term that covers landscape photography, wildlife photography, and garden photography.</p>
+      <a href="" class="btn btn-outline-warning" style="margin-top: 20px; margin-left: 20px;" type="submit">Read More</a>
+
+    </div>
+    <div class="col a_9" data-aos="zoom-in"></div>
+  </div>
+</div>
+
+    <!-- about end -->
+
+
+
+
+     <!-- about end  -->
+
+
+
+     <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+     .d_1{
+        width: 400px;
+        height: 350px;
+        margin: auto;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        transition: all 0.2s ease-in;
+        overflow: hidden;
+      }
+
+      .d_2{
+      display: flex;
+      margin-top: 100px;
+      }
+      .d_3{
+        height: 200px;
+        width: 400px;
+        text-align: center;
+        transition: all 0.4s ease-out;
+        background-color: transparent;
+        color: transparent;
+        margin-top: 300px;
+        border-top-left-radius:50px;
+      }
+      .d_1:hover .d_3{
+        margin-top: 150px;
+        background-color: rgba(0, 0, 0, 0.588);
+        flex-wrap: wrap;
+        color: rgb(180, 142, 18);
+
+        border-top-left-radius:50px;
+     }
+     .d_4{
+      font-size: 13px ;
+     }
+     .text_d_1{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin-top: 10px;
+     }
+
+    </style>
+  
+  
+  
+  
+    <!-- photo graphy image  -->
+    <center><h1 class="a_2" data-aos="fade-up" >Photo-Graphy Explore <span style="color: rgb(180, 142, 18); font-size: 45px;"> Different Moments</span></h1></center>
+  
+    <div class="container-fluid d_2" style="overflow-x: hidden; overflow-y: hidden;">
+  
+      <!-- 1------ -->
+  
+      <div class="d_1" data-aos="zoom-out-right" style="background-image: url(https://as2.ftcdn.net/v2/jpg/04/65/81/19/1000_F_465811905_2OYNvyxjQks4TIItytkBa67C98JBUxpS.jpg);">
+        <div class="d_3">
+          <h1 class="text_d_1">hello<span style="font-size: 20px;">_______</span> </h1>
+          <p class="d_4" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus, in ipsam tenetur laudantihic!</p>
+          <center><button style=" width: 120px; height: 35px; margin-top: 20px; background-color: transparent; border: 1px solid rgb(223, 173, 11); color:rgb(223, 173, 11); text-align: center;">Read More</button></center>
+        </div>
+      </div>
+  
+      <!-- 2---------- -->
+  
+  
+      <div class="d_1" data-aos="flip-left" style="background-image: url(https://pikwizard.com/pw/medium/b86ac7adfba49af1f961ea023fd64531.avif);">
+        <div class="d_3">
+          <h1 class="text_d_1">hello<span style="font-size: 20px;">_______</span> </h1>
+          <p class="d_4" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus, in ipsam tenetur laudantihic!</p>
+          <center><button style=" width: 120px; height: 35px; margin-top: 20px; background-color: transparent; border: 1px solid rgb(223, 173, 11); color:rgb(223, 173, 11); text-align: center;">Read More</button></center>
+
+        </div>
+      </div>
+  
+  
+    <!-- 3--------- -->
+  
+       <div class="d_1" data-aos="zoom-out-left" style="background-image: url(https://pikwizard.com/pw/medium/ec3de99b2e5ad2756e7082c7c10588b0.avif);">
+        <div class="d_3">
+          <h1 class="text_d_1">hello<span style="font-size: 20px;">_______</span> </h1>
+          <p class="d_4" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus, in ipsam tenetur laudantihic!</p>
+          <center><button style=" width: 120px; height: 35px; margin-top: 20px; background-color: transparent; border: 1px solid rgb(223, 173, 11); color:rgb(223, 173, 11); text-align: center;">Read More</button></center>
+
+        </div>
+      </div>
+    </div>
+  
+
+    
+  
+  
+  
+    <!-- 2nd div ----------------------- -->
+  
+  
+      
+    <div class="container-fluid d_2" style="overflow-x: hidden; overflow-y: hidden;">
+  
+      <!-- 1------ -->
+  
+      <div class="d_1" data-aos="zoom-out-right" style="background-image: url(https://pikwizard.com/pw/medium/f534fe3755159e808ce8690853229c34.avif);">
+        <div class="d_3">
+          <h1 class="text_d_1">hello<span style="font-size: 20px;">_______</span> </h1>
+          <p class="d_4" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus, in ipsam tenetur laudantihic!</p>
+          <center><button style=" width: 120px; height: 35px; margin-top: 20px; background-color: transparent; border: 1px solid rgb(223, 173, 11); color:rgb(223, 173, 11); text-align: center;">Read More</button></center>
+
+        </div>
+      </div>
+  
+      <!-- 2---------- -->
+  
+  
+      <div class="d_1" data-aos="flip-left" style="background-image: url(https://pikwizard.com/pw/medium/94881b308c6027b496e744c383d0ced0.avif);">
+        <div class="d_3">
+          <h1 class="text_d_1">hello<span style="font-size: 20px;">_______</span> </h1>
+          <p class="d_4" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus, in ipsam tenetur laudantihic!</p>
+          <center><button style=" width: 120px; height: 35px; margin-top: 20px; background-color: transparent; border: 1px solid rgb(223, 173, 11); color:rgb(223, 173, 11); text-align: center;">Read More</button></center>
+
+        </div>
+      </div>
+  
+  
+    <!-- 3--------- -->
+  
+       <div class="d_1" data-aos="zoom-out-left" style="background-image: url(https://pikwizard.com/pw/medium/38caf609595f9d48246cb4f1f7f45e02.avif);">
+        <div class="d_3">
+          <h1 class="text_d_1">hello<span style="font-size: 20px;">_______</span> </h1>
+          <p class="d_4" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet temporibus, in ipsam tenetur laudantihic!</p>
+          <center><button style=" width: 120px; height: 35px; margin-top: 20px; background-color: transparent; border: 1px solid rgb(223, 173, 11); color:rgb(223, 173, 11); text-align: center;">Read More</button></center>
+
+        </div>
+      </div>
+    </div>
+  
+    
+  
+  
+  
+  
+  
+  
+  <!-- photo graphy image end  -->
+
+<!-- last testimional ennd -->
+
+
+  <style>
+    .c_1{
+      min-height: 70vh;
+      margin-top: 200px;
+      display: flex;
+      width: 70%;
+      display: flex;
+      margin-left: 200px;
+      border: 1px solid black;
+      overflow: hidden;
+      position: relative;
+    }
+    .c_1::before{
+      position: absolute;
+      min-height: 68vh;
+      content: '';
+      background-color: rgb(3, 3, 39);
+      display: flex;
+      width: 99%;
+      border: 1px solid black;
+      display: flex;
+      margin-left:4px;
+      margin-top: 4px;
+    }
+    .c_2{
+      margin-top: 130px;
+      width: 800px;
+      height:30vh;
+      margin-left: 90px;
+      background-color:white;
+      position: relative;
+    }
+
+
+    .c_2::before{
+    position: absolute;
+    height: 30px;
+    width: 40px;
+    content: '';
+    background-color:wheat;
+    margin-top: 13vh;
+    margin-left: 62vh;
+  }
+  .c_2::after{
+    background-color:wheat;
+    position: absolute;
+    height: 30px;
+    width: 40px;
+    content: '';
+    margin-top: -13vh;
+    margin-left: -68vh;
+  }
+  </style>
+
+
+
+<!-- last testimional -->
+
+
+<div class="c_1" >
+  <center><div class="c_2 " data-aos="zoom-out-up">
+    <center><h1 style=" font-size: 35px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; padding-top: 25px;">Why You Chose Us</h1></center>
+  <center><p style="font-size: 14px; margin-left: 50px; margin-right: 50px; margin-top: 20px;">Through our photography website we have compiled the most popualar genres of photography like wedding photography,Event photography,
+    Fine art photography,Food photography,Nature photography,product photography.we will enable photography,desgner, and creat stunning,
+    professional website easily with codong.</p></center>
+  </div></center>
+</div>
+
+  <!-- java script  -->
+
+  
+
+  <br>
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+  <!-- footer -->
+
+      {% include 'footer.html' %}
+
+  <!-- footerend -->
+
+
+  <script>
+    window.onscroll = function(){myfunction()};
+    function myfunction(){
+      if(document.body.scrollTop >180 ||document.documentElement.scrollTop > 180)
+        document.getElementById("ali_hassan").style.display="block";
+      else{
+        document.getElementById("ali_hassan").style.display="none";
+
+    }
+    }
+  </script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+
+
+    <script>
+      AOS.init();
+    </script>
+    
+  </body>
+</html>

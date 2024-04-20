@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>SignUp</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    {% load static  %}
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background-color:rgba(173, 216, 230, 0.1);
+        display: block;
+        }
+   
+        .m_1{
+          background:linear-gradient(rgb(32, 175, 201),lightpink  );
+          min-height: 90vh;
+          display: flex;
+          justify-content: center;
+          place-items: center;
+        }
+        .m_4{
+          height: 400px;
+          width: 400px;
+          background:rgba(224, 224, 224, 0.405);
+          flex-wrap: wrap;
+          display: flex;
+          backdrop-filter: blur(10px);
+        }
+        .m_5{
+          width: 10px;
+          height: 10px;
+          border-top: 15px solid transparent;
+          border-left: 30px solid white;
+          border-bottom: 15px solid transparent;
+          margin-top: 30px;
+          color: white;
+          display: flex;
+          font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+          margin-left: 30px;
+        }
+      
+
+      input{
+        display: block;
+        margin-left: 25px;
+        width: 350px ;
+        outline: none;
+        height: 40px;
+        color:rgb(3,3,39);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 2px solid rgb(139, 133, 133);
+        background-color: rgba(194, 190, 190, 0.2);
+      }
+
+      label{
+        margin-left: 25px;
+        font-size: 20px;
+        font-family:'Times New Roman', Times, serif ;
+        color: rgb(3,3,39);
+        margin-top: 10px;
+      }
+      .main-div{
+        width: 90%;
+        background-color: yellow;
+        margin-top: 100px;
+        min-height: 90vh;
+        margin-bottom: 100px;
+      }
+  
+    </style>
+  </head>
+  <body>
+    {% for fm in messages %}
+    <br>
+    <br>
+    <center> <span class="alert alert-danger w-50 mt-5" role="alert" style="margin-top: 40px;">
+   {{fm}}
+     </span></center>
+     {% endfor %}
+    <div class="container-fluid main-div" >
+      <div class="row">
+        <div class="col m_1">
+          <div class="m_4">
+            <h1><div class="m_5" >Digital Platform For PhotoGraphy </div></h1>
+            <span style="padding-top: 200px; font-size: 25px; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(3,3,39);">learning</span>
+            <span style="padding-top: 260px; margin: 0; color: white;">You will never know anything <br>But you will know more</span>
+          </div>
+        </div>
+
+
+   
+       
+        <div class="col a1  d-block d-grid"  style="background-color: rgb(235, 235, 235);" >
+          <form action="" method="POST">
+            {% csrf_token %}
+            <br>
+            <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; color: rgb(3,3,39); margin-left: 20px;">Hello,Hy <span style="font-size: 25px;">&#128075;</span> </h1>
+            <label for="" style="margin-top: 30px;"> Enter User Name</label>
+            <input type="text" name="username" id="" required >
+            <label for="" > Enter Email</label>
+            <input type="email" name="email" id="" required>
+            
+            <label for="">Enter Password</label>
+            <input type="password" name="password" id="a1" required maxlength="20" minlength="5" >
+            <label for="">Confirm Password</label>
+            <input type="password" name="password2" id="a2" required maxlength="20" minlength="5">
+              <ul style="display: flex;">
+                <input type="checkbox" required name="" id="" style="margin-left: 0px; width: 15px; border:2px solid black; background: transparent; "><span style="font-size: 14px; margin-left: 5px; margin-top: 9px;">Check Now</span>
+                <a href="{% url "login" %}" style="margin-left: 100px; margin-top: 8px; text-decoration: none;">Already have account</a>
+              </ul>
+            <br>
+            <button class="m_6" type="submit" style="margin-left: 20px; width: 200px; height: 45px; background-color: transparent; border-radius: 30px; border: 2px solid rgb(3,3,39); color: rgb(3,3,39);" >Submit</button>
+          </form>
+    </div>
+  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/9d9b446610.js" crossorigin="anonymous"></script>
+    <title>Contact Us</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color:rgba(230, 220, 173, 0.3); 
+
+        }
+        .b1{
+            min-height: 90vh;
+            width: 80%;
+            margin-bottom:10%; 
+            margin-left: 10%;
+            margin-right: 10%;
+            display: flex;
+        }
+        .a1{
+            width: 33%;
+            background-color: rgb(12, 12, 56);
+            min-height: 90vh;
+            position: relative;
+            margin: 0;
+        }
+        .a2{
+            width: 67%;
+            background-color: rgb(173, 216, 230,0.2);
+            display: flex;
+        }
+        .a3{
+            width: 50%;
+        }
+        .a4{
+            width: 50%;
+
+        }
+      
+        label
+        {
+            margin-top: 40px;
+            font-size: 15px;
+            color: black;
+        }
+        input{
+            width: 310px ;
+            margin-top: 5px;
+            outline: none;
+            height: 40px;
+            padding-left: 20px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid rgb(94, 88, 88);
+            background-color: rgba(131, 126, 126, 0.2);
+        }
+        select{
+            width: 310px ;
+            margin-top: 5px;
+            outline: none;
+            height: 40px;
+            padding-left: 20px;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: 2px solid rgb(94, 88, 88);
+            background-color: rgba(131, 126, 126, 0.2);
+        }
+        ul{
+            display: grid;
+        }
+        .button{
+            width: 230px ;
+            margin-top: 60px;
+            margin-left: 32px;
+            color: white;
+            outline: none;
+            text-decoration: none;
+            text-align: center;
+            justify-content: center;
+            padding-top: 15px;
+            height: 55px;
+            border-radius: 40px;
+            background-color: rgb(5, 5, 54);
+        }
+        h2{
+            font-size: 40px;
+            margin-top: 20px;
+            font-weight: bold;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .b2{
+            margin-left: 190px;
+            margin-right: 190px;
+            margin-top: 30px;
+            color: rgb(224, 144, 24);
+            margin-bottom: 50px;
+        }
+        .a_2{
+            font-size: 45px;            
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            padding-top: 30px;
+            color:rgb(12, 12, 56);
+        }
+    .a_4{
+        width: 230px;
+        text-decoration: none;
+        text-align: center;       
+        padding-top: 8px;
+        height: 45px;
+        font-size: 16px;
+        border: 2px solid  rgb(180, 142, 18);
+        color: rgb(255, 255, 255);
+        background-color:rgb(180, 142, 18) ;
+    }
+    </style>
+</head>
+<body>
+    <br>
+    <br>
+    <br>
+    <form action="">
+
+    <div class="b1">
+        <div class="a1">
+            <center><h2 style="color: rgb(185, 155, 55); margin-top:50px;">Contact us</h2></center>
+            <p style="color: rgb(187, 178, 178); padding-left: 20px;" >Let's Start a Conversion<a href="" style="color: rgb(94, 94, 224); text-decoration: none;"> </a></p>
+
+            <ul>
+                <label for="" style="color:rgb(185, 155, 55);;"><i class="fa-solid fa-phone" style="font-size: 25px;"></i> +92 12345678910</label>
+            </ul>
+            <p style="color: rgb(116, 109, 109); margin-top: 40px; font-size: 14px; margin-left: 20px;" >Find Out Your Detail to be Contacted</p>
+            <p style="color: rgb(214, 207, 207);  font-size: 16px; margin-left: 20px;" >Find Out Your Detail to be Contacted</p>
+
+            <label for="" style="color: rgb(214, 207, 207); margin-top: 100px; margin-left: 40px;"> <a href="" style="color: white;"> <i class="fa-solid fa-phone" style="font-size: 25px;"></i></a> <a href="" style="color: white;"><i class="fa-brands fa-twitter" style="font-size: 25px; margin-left: 30px;"></i></a> <a href="" style="color: white;"><i class="fa-brands fa-facebook" style="font-size: 25px; margin-left: 30px;"></i></a></label>
+            
+        </div>
+        <div class="a2">
+               <div class="a3">
+               <ul>
+                    <label for="">Enter Name</label>
+                    <input type="text" name="" id="">
+               </ul>
+               <ul>
+                    <label for="">Enter User Name</label>
+                    <input type="text" name="" id="">
+               </ul>
+               <ul>
+                    <label for="">Enter Details</label>
+                    <input type="text" name="" id="" >
+               </ul>
+                <a type="submit" class="button" href="{% url 'index' %}">Submit Form</a>
+
+               </div>
+               <div class="a4">
+                <ul>
+                    <label for="">Enter Phone Number</label>
+                    <input type="number" name="" id="">
+                </ul>
+                <ul>
+                    <label for="">Enter Email</label>
+                    <input type="email" name="" id="" >
+               </ul>
+               <ul>
+                    <label for="">Chose Country</label>
+                    <select name="" id="">
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="India">India</option>
+                        <option value="Åland Islands">Åland Islands</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Algeria">Algeria</option>
+                        <option value="American Samoa">American Samoa</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="Anguilla">Anguilla</option>
+                        <option value="Antarctica">Antarctica</option>
+                        <option value="Antigua and Barbuda">Antigua and Barbuda</option>
+                        <option value="Argentina">Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Aruba">Aruba</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaijan">Azerbaijan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bahrain">Bahrain</option>
+                    </select>
+                </ul>
+                
+               </div>
+        </div>
+    </div>
+</form>
+
+
+</body>
+</html>

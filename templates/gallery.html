@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gallery</title>
+    <script src="https://kit.fontawesome.com/9d9b446610.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+      }
+      body{
+        background-color:rgba(224, 187, 64, 0.171); 
+        overflow-x: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <style>
+          *{
+        margin: 0;
+        padding: 0;
+      }
+      .a1{
+        min-height:500px;
+        background-color: rgb(3, 3, 39);
+        display: flex;
+      }
+      .a2{
+        margin: auto;
+        width: 350px;
+        height: 550px;
+      }
+     
+      .a4{
+        width: 450px;
+
+      }
+  
+      .btn-outline-warning{
+        margin-left: 100px;
+        width: 150px;
+        text-decoration: none;
+        text-align: center;       
+        padding-top: 8px;
+        height: 45px;
+        font-size: 16px;
+        border-left: 2px solid  rgb(180, 142, 18);
+        border-bottom: 2px solid  rgb(180, 142, 18);
+        color: rgb(180, 142, 18);
+        margin-top: 30px;
+        
+    }
+    .a_4{
+        width: 230px;
+        text-decoration: none;
+        text-align: center;       
+        padding-top: 8px;
+        height: 45px;
+        font-size: 16px;
+        border: 2px solid  rgb(180, 142, 18);
+        color: rgb(255, 255, 255);
+        background-color:rgb(180, 142, 18) ;
+        margin-top: 30px;
+    }
+    .a_2{
+      margin-top: 40px;
+      color: rgb(180, 142, 18);
+      font-size: 35px;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      
+    }
+    .a_3{
+      position: relative;
+    }
+    .a_3::before{
+      position: absolute;
+      content: '';
+      height: 20px;
+      width: 100%;
+      margin-top: 18px;
+      background-color: rgba(180, 142, 18, 0.247);
+    }
+    </style>
+
+    <!-- message------ -->
+    {% for x in messages %}
+
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+      <strong>Hy Welcome</strong>{{x}}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+
+
+    <!-- message- end----- -->
+
+
+    <!-- -------------- -->
+
+
+
+    <div class="container-fluid a1">
+      <div class="a2 a3">
+        <h1 class="a_2"><i class="fa-solid fa-camera" style="margin: 8px; color: rgb(201, 181, 126);"></i>Photo Graphy</h1>
+      </div>
+      <div class="a2 a4">
+        <center><h1 class="a_2" style="margin-top: 200px;"> <span class="a_3">Photography</span> is an itch that won't go away</h1></center>
+        <center><p style="color: rgb(180, 142, 18); margin-top: 20px; font-size: 15px;">When words become unclear, I shall focus with photographs. When images become inadequate, I shall be content with silence  </p></center>
+        <center><a href="{% url 'signup' %}" class=" a_4" style="margin-top: 70px;" type="submit">AVILABLE FOR FREE &#8594;</a></center>
+      </div>
+      <div class="a2 a5">
+        <a href="{% url 'index' %}" class=" btn-outline-warning" style="margin-top: 70px;" type="submit">Home &#8594;</a>
+        <br>
+        <a href="{% url 'image_upload' %}" class=" btn-outline-warning" type="submit">Upload &#8594;</a>
+
+      </div>
+    </div>
+
+    
+    <!-- 2nd part -->
+
+
+    <style>
+
+      .b_3{
+        min-height: 100vh;
+        display: flex;
+        width: 100%;
+      }
+      .b_4{
+        width: 400px;
+        height: 400px;
+        margin-top: 200px;
+        margin-left: 300px;
+        background-image: url(https://cdn.pixabay.com/photo/2023/07/31/17/06/couple-8161451_1280.jpg);
+
+        background-position: center;
+        transition: all 0.3s;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .b_5{
+        width: 450px;
+        height: 500px;
+        margin-top: 100px;
+        margin-left: 20px;
+        background-image: url(https://pikwizard.com/pw/medium/ee8486fab18971b6fbd6230034fd7734.avif);
+        background-position: center;
+        background-size: cover;
+        transition: all 0.3s;
+        background-repeat: no-repeat;
+      }
+      .b_6{
+        width: 300px;
+        height: 350px;
+        margin-left: 350px;
+        background-image: url(https://pikwizard.com/pw/medium/4579a203fb3cc8364aa39ebb7102d569.avif);
+
+        background-position: center;
+        transition: all 0.3s;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+      .b_7{
+        width: 450px;
+        height: 400px;
+        margin-left: 20px;
+        background-image: url(https://newmobility.com/wp-content/uploads/2021/06/Alana-Nichols-Dukes.jpg);
+
+        background-position: center;
+        background-size: cover;
+        transition: all 0.3s;
+        background-repeat: no-repeat;
+      }
+      .b_4:hover , .b_5:hover , .b_6:hover , .b_7:hover{
+        transform: scale(1.1);
+      }
+    </style>
+  
+  
+  
+  
+    <!-- photo graphy image  -->
+  
+  
+    <div class="container-fluid b_3">
+      <div class="b_4"> <img src="" alt=""> 
+        <!-- <img src="/static/images/bird.jpeg" alt=""> -->
+      </div>
+      <div class="b_5"> <img src="" alt=""> 
+        <!-- <img src="/static/images/bird.jpeg" alt=""> -->
+      </div>
+    </div>
+    <div class="container-fluid b_3" style="min-height: 70vh;">
+      <div class="b_6"><img src="" alt=""> 
+        <!-- <img src="/static/images/bird.jpeg" alt=""> -->
+      </div>
+      <div class="b_7"><img src="" alt=""> 
+        <!-- <img src="/static/images/bird.jpeg" alt=""> -->
+      </div>
+    </div>
+  <br>
+  <br>
+  <br>
+
+    <!-- photo graphy image end  -->
+
+
+
+    <style>
+        .bod_2{
+    display:grid ;
+    min-height: 60h;
+    background-color:rgb(3, 3, 39);
+}
+.bod_1{
+text-align: center;
+font-family: sans-serif;
+color: rgb(238, 187, 18);
+margin-top: 60px;
+min-height: 100vh;
+}
+.container_ali {
+position: relative;
+width: 320px;
+margin: 100px auto 0 auto;
+perspective: 1000px;
+}
+
+.carousel_ali {
+position: absolute;
+width: 100%;
+height: 100%;
+transform-style: preserve-3d; 
+animation: rotate360 60s infinite forwards linear;
+}
+.carousel__face { 
+position: absolute;
+width: 300px;
+height: 187px;
+top: 20px;
+left: 10px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+right: 10px;
+background-size: cover;
+display: flex;
+}
+
+span {
+margin: auto;
+font-size: 2rem;
+}
+
+
+.carousel__face:nth-child(1) {
+background-image: url("https://images.pexels.com/photos/1141853/pexels-photo-1141853.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+transform: rotateY(  0deg) translateZ(430px); }
+.carousel__face:nth-child(2) { 
+background-image: url("https://images.pexels.com/photos/1258865/pexels-photo-1258865.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+transform: rotateY( 40deg) translateZ(430px); }
+.carousel__face:nth-child(3) {
+background-image: url("https://images.pexels.com/photos/808466/pexels-photo-808466.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+transform: rotateY( 80deg) translateZ(430px); }
+.carousel__face:nth-child(4) {
+background-image: url("https://images.pexels.com/photos/1394841/pexels-photo-1394841.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+transform: rotateY(120deg) translateZ(430px); }
+.carousel__face:nth-child(5) { 
+background-image: url("https://cdn-prod.medicalnewstoday.com/content/images/articles/325/325466/man-walking-dog.jpg");
+transform: rotateY(160deg) translateZ(430px); }
+.carousel__face:nth-child(6) { 
+background-image: url("https://images.pexels.com/photos/1834400/pexels-photo-1834400.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+transform: rotateY(200deg) translateZ(430px); }
+.carousel__face:nth-child(7) { 
+background-image: url("https://images.pexels.com/photos/1415268/pexels-photo-1415268.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+transform: rotateY(240deg) translateZ(430px); }
+.carousel__face:nth-child(8) {
+background-image: url("https://images.pexels.com/photos/135018/pexels-photo-135018.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+transform: rotateY(280deg) translateZ(430px); }
+.carousel__face:nth-child(9) {
+background-image: url("https://images.pexels.com/photos/1175135/pexels-photo-1175135.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+transform: rotateY(320deg) translateZ(430px); }
+
+
+
+@keyframes rotate360 {
+from {
+transform: rotateY(0deg);
+}
+to {
+transform: rotateY(-360deg);
+}
+}
+    </style>
+
+   
+
+<div class="bod_2">
+  <center><h1 class="a_2" style="margin-top: 120px;">Photo-Graphy Explore <span style="color: rgb(180, 142, 18); font-size: 45px;"> Different Event</span></h1></center>
+  <center><p style=" color: rgb(199, 178, 102); font-size: 15px; margin-left: 5px; margin-right: 5px; margin-top: 25px;">“I like to photograph others before they know what their best angles are</p></center>
+  <center><p style=" color: rgb(199, 178, 102); font-size: 15px; margin-left: 150px; margin-right: 150px; margin-top: 25px;">Photography allows us to express and bring out the beauty in front of us. It's In The Details – As photographers we notice the small things. It's the details that bring an experience together. We notice textures, nature, light, expressions, and surroundings</p></center>
+
+  <div class="bod_1">
+   <div class="container_ali">
+     <div class="carousel_ali">
+       <div class="carousel__face"></div>
+       <div class="carousel__face"></div>
+       <div class="carousel__face"></div>
+       <div class="carousel__face"></div>
+       <div class="carousel__face"></div>
+       <div class="carousel__face"></div>
+       <div class="carousel__face"></div>
+       <div class="carousel__face"></div>
+       <div class="carousel__face"></div>
+     </div>
+   </div>
+    </div>
+   
+    <center><a href="" class=" a_4" type="submit">AVILABLE FOR FREE &#8594;</a></center>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+</div>
+
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<style>
+
+  *{
+    margin: 0;
+    padding: 0;
+  }
+ .f_1{
+    width: 400px;
+    margin: auto;
+    margin-top: 40px;
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    transition: all 0.2s ease-out;
+    overflow: hidden;
+  }
+
+  .f_3{
+    min-height:120px ;
+    width: 400px;
+    display:grid ;
+    transition: all 0.5s ease-out;
+    background-color: rgba(0, 0, 0, 0.744);
+    color: transparent;
+    color: rgb(238, 187, 18);
+    margin-top: 400px;
+    border-top-left-radius:50px;
+  }
+  .f_1:hover .f_3{
+    margin-top: 80px;
+    background-color: rgba(0, 0, 0, 0.744);
+
+    border-top-left-radius:50px;
+ }
+ .f_4{
+  font-size: 13px ;
+ }
+ .f_6{
+  text-decoration: none;
+  border: 1px solid rgb(238, 187, 18);
+  color: rgb(238, 187, 18);
+  height: 45px;
+  margin-left: 80px;
+  border-radius: 40px;
+  text-align: center;
+  padding-top: 10px;
+  margin-bottom: 5px;
+  width: 200px;
+ }
+</style>
+</head>
+<body>
+
+<div class="container-fluid">
+  <div class="row">
+    {% for x in img %}
+
+    <div class="col-4 f_1   p-0"  data-aos="flip-left" style="background-image: linear-gradient(rgba(0, 0, 0, 0.719),transparent),url({{x.photo.url}});">
+      <div class="container-fluid f_3">
+        <h1 class="float-start" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 30px; padding-top: 15px; padding-left: 30px;" >Tittle &#8594; <span style="font-size: 25px;">{{x.title}}</span></h1>
+        <p  style=" padding-left: 10px; font-size: 15px;" ><span style="padding-left: 50px; font-size: 16px;">Summary, </span> {{x.summary}}</p>
+        <p class="float-end" style=" padding-left: 150px;  font-size: 14px;" ><span style="padding-left: 45px; font-size: 16px;">Upload By : </span> {{x.name}}</p>
+        <p class="float-end" style=" padding-left: 150px;  font-size: 12px;" ><span style="padding-left: 45px; font-size: 14px;">Date :</span> {{x.date}}</p>
+        <a href="{{x.photo.url}}" class="f_6  mt-3" download="">Download</a>
+        <a href="{% url 'deleteItem' x.id %}" class="f_6">Delete</a>
+
+
+    </div>
+  </div>
+    {% endfor %}
+    
+  </div>
+</div>
+
+<!-- footer----------- -->
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{% include 'footer.html' %}
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    <script>
+      AOS.init();
+    </script>
+
+  </body>
+</html>
